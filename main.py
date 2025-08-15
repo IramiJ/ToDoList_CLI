@@ -6,8 +6,7 @@ class task():
   self.due = due
 
 def add(content, due):
- t = task(content, due)
- todo_list.append(t)
+ todo_list.append(task(content, due))
  print("task added")
 
 def delete(index):

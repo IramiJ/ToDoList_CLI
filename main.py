@@ -1,8 +1,15 @@
 todo_list = []
 
-def add(task):
- todo_list.append(task)
+class task():
+ def __init__(self, content, due):
+  self.content = content
+  self.due = due
+
+def add(content, due):
+ t = task(content, due)
+ todo_list.append(t)
  print("task added")
+
 def delete(index):
  try:
   if int(index) <= len(todo_list):
@@ -12,18 +19,20 @@ def delete(index):
    print("delete failed!")
  except:
   print("invalid input")
+
 def view_tasks():
  if todo_list == []:
   print("No tasks to be done")
  else:
   for i, task in enumerate(todo_list, 1):
-   print(f"{i}. {task}")
+   print(f"{i}. {task.content}, due at {task.due}")
 
 while True:
  user_input = input("what action do you want to perform? (add,delete,view,quit)? ").lower()
  if user_input == "add":
-  to_push = input("what do you want to add? ")
-  add(to_push)
+  content = input("what do you want to add? ")
+  due = input("when is the task due? ")
+  add(content, due)
  elif user_input == "delete":
   to_delete = input("which task do you wish to delete? ")
   delete(to_delete)

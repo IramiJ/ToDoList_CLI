@@ -9,7 +9,7 @@ while True:
  print("3. Calculator")
  print("4. Quit")
 
- inp = input("choose an option ")
+ inp = input("choose an option: ")
  if inp == "1":
   run_todo()
  elif inp == "2":

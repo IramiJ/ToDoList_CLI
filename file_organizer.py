@@ -26,5 +26,8 @@ def run_file_organizer():
       else:
        shutil.move(file_path, os.path.join(dir, "Others"))
     break
+   elif question == "n":
+    print("goodbye")
+    break
   else:
    print("This directory does not exist. Please try again")

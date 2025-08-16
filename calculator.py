@@ -4,8 +4,17 @@ def run_calculator():
   num1 = input("give me a number: (or use q to quit)")
   if num1.lower() == "q":
    break
-  num1 = float(num1)
-  num2 = float(input("give me another number: "))
+  try:
+   num1 = float(num1)
+  except:
+   print("your input is not a number")
+   continue
+  num2 = input("give me another number: ")
+  try:
+   num2 = float(num2)
+  except:
+   print("your input is not a number")
+   continue
   print("Choose an operation:")
   print("m = multiply")
   print("d = divide")

@@ -32,7 +32,7 @@ def run_todo():
     user_input = input("what action do you want to perform? (add,delete,view,quit)? ").lower()
     if user_input == "add":
       content = input("what do you want to add? ")
-      due = input("when is the task due? ")
+      due = input("when is the task due (as a number)? ")
       add(content, due)
     elif user_input == "delete":
       to_delete = input("which task do you wish to delete? ")

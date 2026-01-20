@@ -39,7 +39,7 @@ This project was created to practice basic programming logic and working with us
 python multi_tool_cli.py
 ```
 
---
+---
 
 ## What i learned
 
